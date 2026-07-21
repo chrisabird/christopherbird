@@ -153,6 +153,16 @@ body {
   border-radius: 2px;
 }
 
+/* Longer labels would wrap awkwardly against the handle on small
+   screens, so stack the two and keep the arrow pinned to the label. */
+@media (max-width: 26rem) {
+  .index a {
+    grid-template-columns: 1fr auto;
+    gap: 0.15rem 1rem;
+  }
+  .handle { grid-column: 1 / -1; }
+}
+
 /* --- footer --------------------------------------------------- */
 
 .foot {
