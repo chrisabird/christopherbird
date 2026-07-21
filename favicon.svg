@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* Washi ground, sumi initials — inverted for dark browser themes. */
+    .ground { fill: #efece5; }
+    .ink    { fill: #1a1a17; }
+    .shu    { fill: #b7352d; }
+    @media (prefers-color-scheme: dark) {
+      .ground { fill: #14140f; }
+      .ink    { fill: #e6e2d6; }
+      .shu    { fill: #d4574c; }
+    }
+  </style>
+
+  <rect class="ground" width="100" height="100"/>
+
+  <!-- Sized to sit inside the box with margin, rather than overflow it. -->
+  <text class="ink" x="48" y="66"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="400" font-size="46" letter-spacing="1">CB</text>
+
+  <!-- The single point of vermilion, carried over from the page. -->
+  <rect class="shu" x="78" y="16" width="7" height="7"/>
+</svg>
