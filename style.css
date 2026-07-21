@@ -103,8 +103,11 @@ body {
 
 /* --- link index ------------------------------------------------- */
 
+/* Held close to the list it labels. When the heading sits as far
+   from its own items as the groups sit from each other, it reads as
+   floating and the grouping collapses. */
 .eyebrow {
-  margin: 0 0 var(--ma-md);
+  margin: 0 0 var(--ma-sm);
   font-family: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
   font-size: 0.6875rem;
   font-weight: 400;
@@ -112,6 +115,11 @@ body {
   text-transform: uppercase;
   color: var(--sumi-thin);
 }
+
+/* The interval between groups is larger than the interval between
+   items within one — that difference is what marks them as groups,
+   in place of a rule or a box. */
+.index section + section { margin-top: var(--ma-xl); }
 
 .index ul {
   display: grid;
