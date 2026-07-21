@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- EDIT: title, description and canonical URL -->
+<title>Christopher Bird</title>
+<meta name="description" content="Christopher Bird — profile and links.">
+<link rel="canonical" href="https://example.com/">
+<meta name="theme-color" content="#eceef1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101215" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Christopher Bird">
+<meta property="og:description" content="Christopher Bird — profile and links.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='system-ui'>CB</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<main class="page">
+
+  <header class="masthead">
+    <!-- EDIT: your name -->
+    <h1 class="name">Christopher<br>Bird<span class="mark">.</span></h1>
+    <!-- EDIT: what you do, in four or five words -->
+    <p class="role">Placeholder role — e.g. software consultant</p>
+  </header>
+
+  <!-- EDIT: two or three sentences. Plain, specific, no adjectives you'd not say aloud. -->
+  <p class="bio">
+    Placeholder bio. Say what you work on, who you work with, and what you're
+    currently interested in. Keep it to about forty words.
+  </p>
+
+  <!-- EDIT: add, remove or reorder rows. Delete any you don't use. -->
+  <nav class="index" aria-label="Links">
+    <h2 class="eyebrow">Elsewhere</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/CHANGEME">
+          <span class="site">GitHub</span>
+          <span class="handle">@CHANGEME</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/CHANGEME">
+          <span class="site">LinkedIn</span>
+          <span class="handle">/in/CHANGEME</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:chris@deliberate.uk">
+          <span class="site">Email</span>
+          <span class="handle">chris@deliberate.uk</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <footer class="foot">
+    <span>Christopher Bird</span>
+    <!-- EDIT: change the IANA timezone below if you're not in the UK -->
+    <span class="clock" data-tz="Europe/London" hidden></span>
+  </footer>
+
+</main>
+
+<script>
+  // Local time, so people know whether they're catching you awake.
+  (function () {
+    var el = document.querySelector('.clock');
+    if (!el) return;
+    var tz = el.dataset.tz;
+    function tick() {
+      el.textContent = new Intl.DateTimeFormat('en-GB', {
+        hour: '2-digit', minute: '2-digit', timeZone: tz
+      }).format(new Date()) + ' local';
+    }
+    try { tick(); } catch (e) { return; }
+    el.hidden = false;
+    setInterval(tick, 30000);
+  })();
+</script>
+</body>
+</html>
